@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Login</class>
+ <widget class="QWidget" name="Login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>342</width>
+    <height>138</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Login</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>261</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>密码</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="passwdLineEdit"/>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="nameCmBox">
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>用户名</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="loginBtn">
+      <property name="text">
+       <string>登录</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="regBtn">
+      <property name="text">
+       <string>注册</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="visitorBtn">
+      <property name="text">
+       <string>普通模式</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>loginBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Login</receiver>
+   <slot>login_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>124</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nameCmBox</sender>
+   <signal>editTextChanged(QString)</signal>
+   <receiver>Login</receiver>
+   <slot>getUserInfo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>92</x>
+     <y>32</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>120</x>
+     <y>7</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>visitorBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Login</receiver>
+   <slot>vistor_Login()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>240</x>
+     <y>103</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>login_clicked()</slot>
+  <slot>getUserInfo()</slot>
+  <slot>transmitdb()</slot>
+  <slot>vistor_Login()</slot>
+ </slots>
+</ui>
